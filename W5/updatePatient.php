@@ -22,6 +22,8 @@
  <form class="form-horizontal" action="updatePatient.php" method="post">
   <input type="hidden" class="form-control" id="action" name="action" value="<?=$action; ?>"/>
    
+    <a href="updatePatient.php?action=Add" id="addPatientBtn" <?php if($action!="Update") {echo 'style="display:none"';} ?>>Add Patient</a>
+
     <div class="panel panel-primary">
 
         <div class="panel-heading"><h4><?= $action; ?> Patient</h4></div>
@@ -65,7 +67,10 @@
       <div class="form-group">        
         <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" class="btn btn-default"><?php echo $action; ?> Patient</button>
+          
+          <button type="submit" class="btn btn-default" id="deleteBtn" <?php if($action!="Update") {echo 'style="display:none"';} ?> >Delete Patient</button>
         </div>
+
       </div>
       
     </div>
