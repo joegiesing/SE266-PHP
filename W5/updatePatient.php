@@ -67,8 +67,9 @@
       <div class="form-group">        
         <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" class="btn btn-default"><?php echo $action; ?> Patient</button>
+          <input type="hidden" class="form-control" id="patientId" name="patientId" value="<?=$id; ?>"/>
           
-          <button type="submit" class="btn btn-default" id="deleteBtn" <?php if($action!="Update") {echo 'style="display:none"';} ?> >Delete Patient</button>
+          <button type="submit" class="btn btn-default" id="deleteBtn" name="deleteBtn" <?php if($action!="Update") {echo 'style="display:none"';} ?> >Delete Patient</button>
         </div>
 
       </div>
